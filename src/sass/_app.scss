@@ -1,0 +1,15 @@
+body,
+html,
+#root,
+.app {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    display: flex;
+    background-color: $background-white;
+}
