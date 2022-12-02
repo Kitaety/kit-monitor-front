@@ -1,13 +1,13 @@
 import React from "react";
 
-class LoginPage extends React.Component {
+class DashboardPage extends React.Component {
     public render(): React.ReactNode {
         return (
             <div>
-                Hello World TS!
+                DashboardPage!
             </div>
         );
     }
 }
 
-export default LoginPage;
+export default DashboardPage;

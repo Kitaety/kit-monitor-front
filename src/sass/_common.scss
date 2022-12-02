@@ -13,3 +13,7 @@ html,
     display: flex;
     background-color: $background-white;
 }
+
+.hide {
+    display: none !important;
+}
