@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BsFillPersonFill } from "react-icons/bs";
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 import classNames from "classnames";
 
 type ISideMenuProps = {
@@ -19,7 +19,7 @@ const SideMenu: React.FC<ISideMenuProps> = ({hide = false}) => (
         </ul>
         <div className="account-button">
             <div className="icon">
-                <BsFillPersonFill />
+                <AccountCircleRoundedIcon />
             </div>
             <div className="text">
                 Account

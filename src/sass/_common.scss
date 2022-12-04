@@ -1,7 +1,7 @@
 body,
 html,
 #root,
-.app {
+.wrapper {
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -9,7 +9,7 @@ html,
     font-family: 'Roboto', sans-serif;
 }
 
-.app {
+.wrapper {
     display: flex;
     background-color: $background-white;
 }
