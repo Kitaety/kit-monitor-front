@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import SideMenu from "./SideMenu";
 import { isHideSideMenuRouter } from '../helpers/routers';
-import { Container } from "@mui/material";
 
 const Layout: React.FC = () => {
     const pathname: string = useLocation().pathname;
@@ -14,9 +13,7 @@ const Layout: React.FC = () => {
     return (
         <div className="wrapper">
             <SideMenu hide={hideSideMenu}/>
-            <Container >
-                <Outlet />
-            </Container>
+            <Outlet />
         </div>
     );
 };
