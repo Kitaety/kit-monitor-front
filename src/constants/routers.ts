@@ -1,7 +1,7 @@
 const routersPath = {
     home: '/',
     login: 'login',
-    registration: 'registr',
+    registration: 'registration',
     dashboard: 'dashboard',
 };
 

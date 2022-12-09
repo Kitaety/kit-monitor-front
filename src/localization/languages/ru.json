@@ -1,0 +1,13 @@
+{
+    "singIn": "Войти",
+    "singUp": "Зарегистрироваться",
+    "password": "Пароль",
+    "emailAddress": "Адрес электронной почты",
+    "forgotPassword": "Забыли пароль?",
+    "dontHaveAccount": "Нет аккаунта? Создать",
+    "fistName": "Имя",
+    "lastName": "Фамилия",
+    "alreadyHaveAccount": "Уже есть аккаунта? Войти",
+    "companyName": "Название организации",
+    "dashboard": "Информационная панель"
+}

@@ -1,13 +1,16 @@
-import { Button, Typography, Container, Box, Avatar, TextField, FormControlLabel, Checkbox, Grid, Link } from '@mui/material';
+import * as React from "react";
+import { Button, Typography, Container, Box, Avatar, TextField, Grid, Link } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import React from "react";
-import strings from '../../localization/index';
+import localization from '../../localization/index';
+import routersPath from '../../constants/routers';
+import { NavigateFunction } from "react-router-dom";
 
-class LoginPage extends React.Component {
-    public onClick = () => {
-        const isRu: boolean = strings.getLanguage() === 'ru';
-        strings.setLanguage(isRu ? 'en' : 'ru');
-        this.setState({});
+type ILoginPageProps = {
+    navigation: NavigateFunction
+}
+class LoginPage extends React.Component<ILoginPageProps> {
+    public onSubmit = () => {
+        this.props.navigation(routersPath.dashboard);
     };
 
     public render(): React.ReactNode {
@@ -19,21 +22,22 @@ class LoginPage extends React.Component {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
+                        backgroundColor: (theme) => theme.palette.background.default
                     }}
                 >
                     <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                         <LockOutlinedIcon />
                     </Avatar>
                     <Typography component="h1" variant="h5">
-                        Sign in
+                        {localization.singIn}
                     </Typography>
-                    <Box component="form" noValidate sx={{ mt: 1 }}>
+                    <Box sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"
                             required
                             fullWidth
                             id="email"
-                            label="Email Address"
+                            label={localization.emailAddress}
                             name="email"
                             autoComplete="email"
                             autoFocus
@@ -43,32 +47,28 @@ class LoginPage extends React.Component {
                             required
                             fullWidth
                             name="password"
-                            label="Password"
+                            label={localization.password}
                             type="password"
                             id="password"
                             autoComplete="current-password"
                         />
-                        <FormControlLabel
-                            control={<Checkbox value="remember" color="primary" />}
-                            label="Remember me"
-                        />
                         <Button
-                            type="submit"
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
+                            onClick={this.onSubmit}
                         >
-                            Sign In
+                            {localization.singIn}
                         </Button>
                         <Grid container>
                             <Grid item xs>
                                 <Link href="#" variant="body2">
-                                    Forgot password?
+                                    {localization.forgotPassword}
                                 </Link>
                             </Grid>
                             <Grid item>
-                                <Link href="#" variant="body2">
-                                    {"Don't have an account? Sign Up"}
+                                <Link href={routersPath.registration} variant="body2">
+                                    {localization.singUp}
                                 </Link>
                             </Grid>
                         </Grid>

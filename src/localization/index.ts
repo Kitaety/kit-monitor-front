@@ -1,11 +1,11 @@
 import LocalizedStrings from 'react-localization';
-import { IStrings } from './type';
-import ru from './variants/ru';
-import en from './variants/en';
+import { ILocalizationStrings } from './type';
+import ru from './languages/ru.json';
+import en from './languages/en.json';
 
-const strings: IStrings = new LocalizedStrings({
+const localization: ILocalizationStrings = new LocalizedStrings({
     ru,
     en
 });
 
-export default strings;
+export default localization;

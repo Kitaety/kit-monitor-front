@@ -1,0 +1,13 @@
+{
+    "singIn": "Sing In",
+    "singUp": "Sing Up",
+    "password": "Password",
+    "emailAddress": "Email Address",
+    "forgotPassword": "Forgot Password?",
+    "dontHaveAccount": "Don't have an account? Sing Up",
+    "fistName": "First Name",
+    "lastName": "Last Name",
+    "alreadyHaveAccount": "Already have an account? Sing In",
+    "companyName": "Company Name",
+    "dashboard": "Dashboard"
+}
